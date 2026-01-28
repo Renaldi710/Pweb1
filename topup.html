@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Top Up — ReyyTop</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous">
+</head>
+<body>
+  <section id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Reyy<span class="text-warning">Top</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMain">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="status.html">Cek Status</a></li>
+                <li class="nav-item"><a class="nav-link" href="bukutamu.html">Bantuan</a></li>
+                <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+  </section>
+
+  <header class="py-5 bg-light border-bottom">
+    <div class="container">
+      <h1 class="h3 fw-bold mb-1">Form Top Up</h1>
+      <p class="text-muted mb-0">Isi data akun, pilih paket, dan metode pembayaran. Proses cepat & mudah.</p>
+    </div>
+  </header>
+
+
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <section aria-labelledby="formTopupHeading" class="p-4 bg-white border rounded-3">
+            <h2 id="formTopupHeading" class="h5 fw-bold mb-4">Data Transaksi</h2>
+
+            <form action="#" method="post" novalidate>
+              <!-- Pilih Game -->
+              <div class="mb-3">
+                <label class="form-label" for="game">Nama Game</label>
+                <select id="game" name="game" class="form-select" required>
+                  <option value="" selected disabled>— Pilih Game —</option>
+                  <option value="mlbb">Mobile Legends</option>
+                  <option value="ff">Free Fire</option>
+                  <option value="genshin">PUBG</option>
+                  <option value="valo">Ragnarok: Classic</option>
+                </select>
+              </div>
+              <div class="row">
+                <div class="col-md-8 mb-3">
+                  <label class="form-label" for="uid">User ID</label>
+                  <input id="uid" name="uid" type="text" class="form-control" placeholder="Contoh: 123456789" minlength="6" required>
+                  <div class="form-text">Minimal 6 digit angka.</div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label class="form-label" for="server">Server</label>
+                  <input id="server" name="server" type="text" class="form-control" placeholder="Mis. 1234">
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label d-block">Paket</label>
+
+                <div class="row g-2">
+                  <div class="col-12 col-sm-6">
+                    <div class="form-check border rounded p-2">
+                      <input class="form-check-input" type="radio" name="paket" id="pkg1" value="86" required>
+                      <label class="form-check-label" for="pkg1">86 Diamonds / 60 Genesis</label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-check border rounded p-2">
+                      <input class="form-check-input" type="radio" name="paket" id="pkg2" value="172" required>
+                      <label class="form-check-label" for="pkg2">172 Diamonds / 300 Genesis</label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-check border rounded p-2">
+                      <input class="form-check-input" type="radio" name="paket" id="pkg3" value="257" required>
+                      <label class="form-check-label" for="pkg3">257 Diamonds / 980 Genesis</label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-check border rounded p-2">
+                      <input class="form-check-input" type="radio" name="paket" id="pkg4" value="custom">
+                      <label class="form-check-label" for="pkg4">Lainnya / Custom (tulis di catatan)</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="pay">Metode Pembayaran</label>
+                <select id="pay" name="pay" class="form-select" required>
+                  <option value="" selected disabled>— Pilih Metode —</option>
+                  <option value="qris">QRIS</option>
+                  <option value="dana">DANA</option>
+                  <option value="ovo">OVO</option>
+                  <option value="bca">Transfer BCA</option>
+                </select>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label" for="email">Email</label>
+                  <input id="email" name="email" type="email" class="form-control" placeholder="uasrenaldi@email.com" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label" for="wa">WhatsApp</label>
+                  <input id="wa" name="wa" type="tel" class="form-control" placeholder="089xxxxxxxxx" pattern="08[0-9]{8,}" required>
+                  <div class="form-text">Format: mulai 08… minimal 10–12 digit.</div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="note">Catatan Tambahan</label>
+                <textarea id="note" name="note" class="form-control" rows="3" placeholder="Contoh: nickname, server region, jam preferensi"></textarea>
+              </div>
+              <div class="mb-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="agree" required>
+                  <label class="form-check-label" for="agree">
+                    Saya setuju dengan ketentuan layanan dan memahami situs ini sebagai halam topup.
+                  </label>
+                </div>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Buat Pesanan</button>
+              </div>
+              <p class="small text-muted mt-3 mb-0">
+                Periksa kembali data sebelum mengiri,, pastikan uid dan server benar agar diamond masuk tanpa kendala.
+              </p>
+            </form>
+          </section>
+        </div>
+        <div class="col-lg-5">
+          <aside class="p-4 bg-white border rounded-3">
+            <h2 class="h6 fw-bold">Panduan Pengisian</h2>
+            <ol class="small mb-4">
+              <li>Pilih <strong>Nama Game</strong>.</li>
+              <li>Isi <strong>User ID</strong> dan <em>Server</em> (kalau diperlukan).</li>
+              <li>Pilih <strong>Paket</strong> dan <strong>Metode Pembayaran</strong>.</li>
+              <li>Isi <strong>Email</strong> dan <strong>WhatsApp</strong>.</li>
+              <li>Centang persetujuan dan tekan <em>Buat Pesanan</em>.</li>
+            </ol>
+
+            <div class="alert alert-warning small" role="alert">
+              <strong>Penting:</strong> Cek Kembali Guys
+            </div>
+
+            <div>
+              <h3 class="h6 fw-bold">Butuh bantuan?</h3>
+              <p class="small mb-2">Cek FAQ atau hubungi kami lewat halaman bantuan.</p>
+              <a class="btn btn-outline-secondary btn-sm" href="bukutamu.html">Buka Bantuan</a>
+            </div>
+          </aside>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <footer class="bg-dark py-4 border-top">
+        <div class="container small text-white d-flex flex-wrap gap-3 justify-content-between">
+            <span>© 2026 ReyyTop — UAS</span>
+            <span>
+            <a href="bantuan.html" class="link-secondary me-3">Bantuan</a>
+            <a href="tentang.html" class="link-secondary">Tentang</a>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>
